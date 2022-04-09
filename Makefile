@@ -6,7 +6,7 @@
 #    By: afaby <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/29 09:46:57 by afaby             #+#    #+#              #
-#    Updated: 2022/04/06 11:19:45 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/09 11:43:53 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS =	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c \
 		ft_memchr.c		ft_memcmp.c		ft_strnstr.c	ft_putendl_fd.c \
 		ft_putstr_fd.c	ft_putchar_fd.c	ft_putnbr_fd.c	ft_strjoin.c \
 		ft_substr.c		ft_split.c		ft_strmapi.c	ft_itoa.c \
-		ft_strtrim.c
+		ft_strtrim.c 	ft_striteri.c
 
 SRCS_BONUS =	ft_lstnew.c		ft_lstlast.c	ft_lstsize.c \
 			ft_lstadd_front.c	ft_lstadd_back.c	ft_lstiter.c \
@@ -35,7 +35,7 @@ OBJS_BONUS = $(SRCS:.c=.o) $(SRCS_BONUS:.c=.o)
 
 CC =	gcc
 
-all: bonus
+all: $(NAME)
 
 clean:
 	rm -f $(OBJS_BONUS)
@@ -52,7 +52,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-bonus: $(OBJS) $(OBJS_BONUS)
+bonus: $(OBJS_BONUS)
 	ar rc $(NAME) $(OBJS_BONUS)
 	ranlib $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 18:18:04 by afaby             #+#    #+#             */
-/*   Updated: 2022/03/31 16:08:22 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 11:22:19 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*res;
 	unsigned int	i;
 
+	if (!s)
+		return (NULL);
 	if (start >= ft_len(s))
 	{
 		res = malloc(1);

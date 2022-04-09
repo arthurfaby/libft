@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:49:25 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/06 11:36:16 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 11:23:26 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		i;
 
+	if (!s1 || !set)
+		return (NULL);
 	res = malloc(ft_len(s1) - count_trim(s1, set) + 1);
 	if (res == NULL)
 		return (NULL);

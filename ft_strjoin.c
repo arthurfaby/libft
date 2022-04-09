@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 18:12:41 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/02 10:30:19 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 11:22:56 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
 
+	if (!s1 || !s2)
+		return (NULL);
 	res = malloc(ft_strlen_loc(s1) + ft_strlen_loc(s2) + 1);
 	if (res == NULL)
 		return (NULL);

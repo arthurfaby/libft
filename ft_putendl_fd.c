@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 17:59:20 by afaby             #+#    #+#             */
-/*   Updated: 2022/03/29 18:05:59 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 12:09:25 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static void	ft_putchar_fd_loc(char c, int fd)
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 	ft_putchar_fd_loc('\n', fd);

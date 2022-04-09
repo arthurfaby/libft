@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 09:29:13 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/05 17:39:58 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 12:08:21 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ static int	count_words(const char *s, char c)
 
 	n = 0;
 	i = 0;
+	if (!s)
+		return (-2);
 	while (s[i])
 	{
 		if (s[i] != c && s[i])
@@ -63,12 +65,12 @@ static char	*isolation(int start, int end, const char *s)
 	return (tmp);
 }
 
-void	init_vars(int *start, int *i, int *n, int *end)
+void	init_vars(int *i, int *start, int *n, int *end)
 {
-	*start = 0;
 	*i = -1;
-	*n = 0;
+	*start = 0;
 	*end = 0;
+	*n = 0;
 }
 
 char	**ft_split(const char *s, char c)
@@ -79,7 +81,7 @@ char	**ft_split(const char *s, char c)
 	int		i;
 	int		n;
 
-	init_vars(&start, &i, &n, &end);
+	init_vars(&i, &start, &n, &end);
 	list = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!list)
 		return (NULL);

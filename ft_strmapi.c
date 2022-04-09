@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:05:00 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/02 10:29:12 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/07 12:08:47 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int		i;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	res = ft_calloc_loc(ft_len(s) + 1, sizeof(char));
 	if (!res)
 		return (NULL);
