@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: afaby <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/29 09:46:57 by afaby             #+#    #+#              #
-#    Updated: 2022/04/09 11:43:53 by afaby            ###   ########.fr        #
+#    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
+#    Updated: 2022/04/11 11:11:16 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,25 +20,23 @@ SRCS =	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c \
 		ft_memchr.c		ft_memcmp.c		ft_strnstr.c	ft_putendl_fd.c \
 		ft_putstr_fd.c	ft_putchar_fd.c	ft_putnbr_fd.c	ft_strjoin.c \
 		ft_substr.c		ft_split.c		ft_strmapi.c	ft_itoa.c \
-		ft_strtrim.c 	ft_striteri.c
+		ft_strtrim.c 	ft_striteri.c	ft_putchar.c	ft_putnbr.c \
+		ft_putstr.c		ft_putnbr_base.c ft_lstnew.c	ft_lstlast.c \
+		ft_lstsize.c	ft_lstadd_front.c ft_lstadd_back.c ft_lstiter.c \
+		ft_lstdelone.c	ft_lstclear.c 	ft_lstmap.c		ft_putptr.c \
 
-SRCS_BONUS =	ft_lstnew.c		ft_lstlast.c	ft_lstsize.c \
-			ft_lstadd_front.c	ft_lstadd_back.c	ft_lstiter.c \
-			ft_lstdelone.c	ft_lstclear.c 	ft_lstmap.c \
 	
 
 FLAGS =	-Wall -Wextra -Werror
 
 OBJS =	$(SRCS:.c=.o)
 
-OBJS_BONUS = $(SRCS:.c=.o) $(SRCS_BONUS:.c=.o)
-
 CC =	gcc
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS_BONUS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -50,10 +48,6 @@ re: fclean all
  
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
-
-bonus: $(OBJS_BONUS)
-	ar rc $(NAME) $(OBJS_BONUS)
 	ranlib $(NAME)
 
 .PHONY: all clean fclean re bonus
