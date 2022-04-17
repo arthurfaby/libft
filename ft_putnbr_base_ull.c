@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_ull.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:55:44 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/13 13:25:18 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 17:45:17 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,30 +36,22 @@ static int	check_base_validity(char *str)
 	return (1);
 }
 
-int	ft_putnbr_base(long long int nbr, char *base)
+int	ft_putnbr_base_ull(unsigned long long int nbr, char *base)
 {
-	int		ret;
+	unsigned long long int		base_len;
+	int							ret;
 
 	ret = 0;
-	if (!check_base_validity(base))
-		return (0);
-	if (nbr < 0)
+	if (check_base_validity(base))
 	{
-		ret += ft_putchar('-');
-		if (nbr == -2147483648)
+		base_len = ft_strlen(base);
+		if (nbr < base_len)
+			ret += ft_putchar(base[nbr]);
+		else
 		{
-			ft_putnbr_base(nbr / 10, base);
-			ft_putchar('8');
-			return (11);
+			ret += ft_putnbr_base(nbr / base_len, base);
+			ret += ft_putnbr_base(nbr % base_len, base);
 		}
-		nbr *= -1;
-	}
-	if (nbr < (long long int)ft_strlen(base))
-		ret += ft_putchar(base[nbr]);
-	else
-	{
-		ret += ft_putnbr_base(nbr / ft_strlen(base), base);
-		ret += ft_putnbr_base(nbr % ft_strlen(base), base);
 	}
 	return (ret);
 }

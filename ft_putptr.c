@@ -6,14 +6,25 @@
 /*   By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 10:43:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/11 11:11:27 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 17:43:18 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_printptr(void *ptr)
+int	ft_putptr(void *ptr)
 {
-	ft_putstr("0x");
-	ft_putnbr_base((long long int)ptr, "0123456789abcdef");
+	int	ret;
+
+	ret = 0;
+	if (!ptr)
+		ret += ft_putstr("(nil)");
+	else
+	{
+		ret += ft_putstr("0x");
+		ret += ft_putnbr_base_ull(
+				(unsigned long long int)ptr, "0123456789abcdef"
+				);
+	}
+	return (ret);
 }

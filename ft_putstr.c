@@ -6,16 +6,23 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 17:59:20 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/10 18:30:24 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 10:32:51 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
+	int	ret;
+
 	if (!s)
-		return ;
+	{
+		ft_putstr("(null)");
+		return (6);
+	}
+	ret = ft_strlen(s);
 	while (*s)
 		write(1, s++, 1);
+	return (ret);
 }

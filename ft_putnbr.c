@@ -6,30 +6,34 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:27:42 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/11 10:49:47 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/12 17:52:48 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(long long int n)
+int	ft_putnbr(long long int n)
 {
+	int	ret;
+
+	ret = 0;
 	if (n == -2147483648)
 	{
 		ft_putnbr(n / 10);
 		ft_putchar('8');
-		return ;
+		return (11);
 	}
 	if (n < 0)
 	{
-		ft_putchar('-');
+		ret += ft_putchar('-');
 		n = -n;
 	}
 	if (n < 10)
-		ft_putchar(n + '0');
+		ret += ft_putchar(n + '0');
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ret += ft_putnbr(n / 10);
+		ret += ft_putnbr(n % 10);
 	}
+	return (ret);
 }
