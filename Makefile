@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/22 22:30:46 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/24 17:23:01 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,12 +68,15 @@ LL     =	ft_lstnew.c \
 			ft_lstclear.c \
 			ft_lstmap.c
 
+GNL    =	get_next_line.c
+
 SRCS   =	$(addprefix char/, $(CHAR)) \
 			$(addprefix str/, $(STR)) \
 			$(addprefix memory/, $(MEMORY)) \
 			$(addprefix output/, $(OUTPUT)) \
 			$(addprefix other/, $(OTHER)) \
-			$(addprefix ll/, $(LL))
+			$(addprefix ll/, $(LL)) \
+			$(addprefix gnl/, $(GNL))
 	
 
 FLAGS =	-Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:56:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/22 22:04:48 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/24 17:24:30 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,10 @@ int		ft_putnbr_base(long long int nbr, char *base);
 int		ft_putnbr_base_u(unsigned int nbr, char *base);
 int		ft_putnbr_base_ull(unsigned long long int nbr, char *base);
 int		ft_putptr(void *ptr);
+
+// GNL
+
+char	*get_next_line(int fd, int buffer_size);
 
 // OTHERS
 
