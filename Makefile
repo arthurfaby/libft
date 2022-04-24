@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/24 17:23:01 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/24 17:42:05 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,20 +86,27 @@ OBJS =	$(SRCS:.c=.o)
 CC =	gcc
 
 all: $(NAME)
+	@echo "\n\033[0;32m"
+	@echo "----------------------------"
+	@echo "| Compilation terminated ! |"
+	@echo "----------------------------"
+	@echo "\033[0m"
 
 clean:
 	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 .c.o:
-	$(CC) $(FLAGS) -I. -c $< -o $@ 
+	@echo "\033[0;35m"
+	@echo -n "Compiling $<..."
+	@$(CC) $(FLAGS) -I. -c $< -o $@ 
  
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 .PHONY: all clean fclean re bonus
