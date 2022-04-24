@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:56:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/24 17:24:30 by afaby            ###   ########.fr       */
+/*   Updated: 2022/04/24 17:47:54 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_free_double_pointer(void **to_free);
 
 
 // OUTPUT FUNCTIONS

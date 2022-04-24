@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/24 17:42:05 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/24 17:48:16 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ MEMORY =	ft_memset.c \
 			ft_memmove.c \
 			ft_calloc.c \
 			ft_memchr.c \
-			ft_memcmp.c
+			ft_memcmp.c \
+			ft_free_double_pointer.c
 
 OUTPUT =	ft_putchar.c \
 			ft_putchar_fd.c \
