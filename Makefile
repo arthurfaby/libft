@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/25 14:42:16 by afaby            ###   ########.fr        #
+#    Updated: 2022/04/29 17:31:31 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,13 +72,17 @@ LL     =	ft_lstnew.c \
 
 GNL    =	get_next_line.c
 
+FT_PTF =	ft_printf.c \
+			ft_process.c
+
 SRCS   =	$(addprefix char/, $(CHAR)) \
 			$(addprefix str/, $(STR)) \
 			$(addprefix memory/, $(MEMORY)) \
 			$(addprefix output/, $(OUTPUT)) \
 			$(addprefix other/, $(OTHER)) \
 			$(addprefix ll/, $(LL)) \
-			$(addprefix gnl/, $(GNL))
+			$(addprefix gnl/, $(GNL)) \
+			$(addprefix ft_printf/, $(FT_PTF))
 	
 
 FLAGS =	-Wall -Wextra -Werror
