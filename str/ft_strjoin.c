@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 18:12:41 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/24 18:09:50 by afaby            ###   ########.fr       */
+/*   Updated: 2022/05/06 15:47:25 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[c] != '\0')
 		str[i++] = s2[c++];
 	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
-	free(s1);
 	return (str);
 }

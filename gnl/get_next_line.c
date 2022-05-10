@@ -6,11 +6,39 @@
 /*   By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 17:10:27 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/24 17:24:19 by afaby            ###   ########.fr       */
+/*   Updated: 2022/05/06 15:48:22 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+static char	*ft_strjoin_gnl(char *s1, char *s2)
+{
+	size_t	i;
+	size_t	c;
+	char	*str;
+
+	if (!s1)
+	{
+		s1 = (char *)malloc(1 * sizeof(char));
+		if (!s1)
+			return (NULL);
+		s1[0] = '\0';
+	}
+	if (!s1 || !s2)
+		return (NULL);
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	i = -1;
+	c = 0;
+	while (s1[++i] != '\0')
+		str[i] = s1[i];
+	while (s2[c] != '\0')
+		str[i++] = s2[c++];
+	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	free(s1);
+	return (str);
+}
 
 static char	*cut_str(char *to_process)
 {
@@ -82,7 +110,7 @@ char	*get_next_line(int fd, int buffer_size)
 			return (0);
 		}
 		buf[ret] = '\0';
-		to_process[fd] = ft_strjoin(to_process[fd], buf);
+		to_process[fd] = ft_strjoin_gnl(to_process[fd], buf);
 	}
 	free(buf);
 	res = get_subline(to_process[fd]);

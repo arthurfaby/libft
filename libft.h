@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:56:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/29 17:32:46 by afaby            ###   ########.fr       */
+/*   Updated: 2022/05/10 11:32:20 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*get_next_line(int fd, int buffer_size);
 
 // FT_PRINT
 
-int	ft_printf(const char *, ...);
+int		ft_printf(const char *s, ...);
 
 // OTHERS
 
