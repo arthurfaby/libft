@@ -6,11 +6,12 @@
 /*   By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 17:10:27 by afaby             #+#    #+#             */
-/*   Updated: 2022/05/06 15:48:22 by afaby            ###   ########.fr       */
+/*   Updated: 2022/05/10 15:35:52 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	size_t	i;

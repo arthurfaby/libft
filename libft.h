@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:56:47 by afaby             #+#    #+#             */
-/*   Updated: 2022/05/10 11:32:20 by afaby            ###   ########.fr       */
+/*   Updated: 2022/05/10 15:36:30 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 // CHAR FUNCTIONS
 
@@ -64,7 +63,6 @@ void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_free_double_pointer(void **to_free);
-
 
 // OUTPUT FUNCTIONS
 
