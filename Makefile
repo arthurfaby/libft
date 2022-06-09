@@ -6,7 +6,7 @@
 #    By: afaby <afaby@student.42angouleme.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/10 19:07:12 by afaby             #+#    #+#              #
-#    Updated: 2022/04/29 17:31:31 by afaby            ###   ########.fr        #
+#    Updated: 2022/06/09 15:36:10 by afaby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,11 +92,7 @@ OBJS =	$(SRCS:.c=.o)
 CC =	gcc
 
 all: $(NAME)
-	@echo "\n\033[0;32m"
-	@echo "----------------------------"
-	@echo "| Compilation terminated ! |"
-	@echo "----------------------------"
-	@echo "\033[0m"
+	@echo "\n\033[0m"
 
 clean:
 	@rm -f $(OBJS)
