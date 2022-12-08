@@ -6,7 +6,7 @@
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 15:05:07 by afaby             #+#    #+#             */
-/*   Updated: 2022/04/06 10:41:02 by afaby            ###   ########.fr       */
+/*   Updated: 2022/07/19 10:20:35 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int	ft_atoi(const char *nptr)
 		res = res * 10 + (*nptr - '0');
 		nptr++;
 	}
-	return ((int)neg * res);
+	return ((int)(neg * res));
 }
